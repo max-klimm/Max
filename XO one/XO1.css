@@ -1,0 +1,27 @@
+﻿#box {
+  border: 4px solid dodgerblue;
+  height: 312px;
+  width: 312px;
+  position: relative;
+  left: 35%;
+  top: 100px;
+  border-radius: 20px;
+}
+#box input {
+  float: left;
+  font-size: 70px;
+  height: 100px;
+  margin: 2px;
+  width: 100px;
+  border-radius: 20px;
+}
+#resetButton{
+  border: 4px solid grey;
+  font-size: 20px;
+  height: 50px;
+  width: 320px;
+  position: relative;
+  left: 35%;
+  top: 100px;
+  border-radius: 20px;
+}
