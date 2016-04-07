@@ -156,16 +156,23 @@ function whatKey(evt) {
             paddleGreen.moveDown(board);
             break;
     }
-};
+}
+function textOutput(){
+    ctx.font = "bold 38px Verdana,sans-serif";
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "black";
+    ctx.strokeText("     Игра окончена", 20, 150);
+}
+
 function goGo(){
     board.drawPole();
     paddleRed.draw();
     paddleGreen.draw();
     ball.draw();
     ball.move();
-};
+}
 function gameOver(){
-    alert("Game over");
+   textOutput();
 clearInterval(gameLoop);
 }
 
