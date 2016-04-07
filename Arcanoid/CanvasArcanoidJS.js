@@ -23,6 +23,7 @@ var ballY = 350;//шар по у
 var ballSize=5;//Размер шара
 var ballDX = 1;//дельта х шара
 var ballDY = 1;//дельта у шара
+
 var ball={
     x:ballX,
     y:ballY,
@@ -48,6 +49,7 @@ var paddleH = 10;//высота доски
 var paddleY = boardY - paddleH;//доска по У=высота поля-высота доски
 var paddleW = 300;//длинна доски
 var speedPaddle=25;//скорость доски
+
 var paddle ={
     x:paddleX,
     y:paddleY,
