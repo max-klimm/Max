@@ -80,8 +80,14 @@ function Snake(game) {
     };
     this.initialize();
 }
+function textOutput(){
+    game.context.font = "bold 38px Verdana,sans-serif";
+    game.context.lineWidth = 1;
+    game.context.strokeStyle = "black";
+    game.context.strokeText("     Игра окончена", 20, 150)
+}
 function gameOver(){
-    alert('GAME OVER');
+   textOutput();
     clearInterval(gameLoop);
 }
 function Food(game) {
