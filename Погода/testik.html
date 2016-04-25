@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<form name=MyForm>
+    <script language = javascript>
+        function foo(){
+            document.MyForm.select1.length=0;  //this clears the select box
+            document.MyForm.select1.options[0] = new Option("<Select One>","0",true,true);
+            for (var i=0; i < 20;i++)	{
+                document.MyForm.select1.options[i+1] = new Option("Option" + i,"Value" + i);
+            }
+        }
+    </script>
+
+    <p><SELECT name="select1" style="HEIGHT: 22px; WIDTH: 340px">
+    </select>
+    <p><input type=button value="Заполнить" onclick="foo()">
+</form>
+
+
+<div class="col-xs-4">
+    <div class="panel-body">
+        <select class="js-example-basic-single" id="inputCity1">
+            <option value="London">London</option>
+            <option value="Kiev">Kiev</option>
+            <option value="Rome">Rome</option>
+            <option value="Berlin">Berlin</option>
+            <option value="Kabul">Kabul</option>
+            <option value="Washington">Washington</option>
+            <option value="Vienna">Vienna</option>
+            <option value="Minsk">Minsk</option>
+            <option value="Baku">Baku</option>
+            <option value="Sofia">Sofia</option>
+            <option value="Tbilisi">Tbilisi</option>
+            <option value="Tallinn">Tallinn</option>
+            <option value="Cairo">Cairo</option>
+            <option value="Budapest">Budapest</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Oslo">Oslo</option>
+        </select>
+        <p>temp max F<input type="text" class="form-control" name="text" id="temp_max1"/>
+        <p>temp max C<input type="text" class="form-control" name="text" id="temp_maxC1"/>
+        <p> temp min F<input type="text" class="form-control" name="text" id="temp_min1"/>
+        <p>temp min C<input type="text" class="form-control" name="text" id="temp_minC1"/>
+        <p>wind<input type="text" class="form-control" name="text" id="speed_wind1"/>
+        <p>clouds<input type="text" class="form-control" name="text" id="clouds1"/>
+        <p><button type="button" name="button" id="button1" onclick="sendRequest()" class="btn btn-primary btn-sm">GET</button>
+    </div>
+</div>
+
+</body>
+</html>
