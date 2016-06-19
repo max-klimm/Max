@@ -1,0 +1,90 @@
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Погода</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+    <script src="weather.js"></script>
+    <script src="main.js"></script>
+    <script src="dataWeather.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        $(document).ready(function() {
+             $(".js-example-basic-single").select2({data:listCity});
+        });
+    </script>
+</head>
+<body>
+    <table class="table table-hover table-bordered">
+       <thead>
+        <tr>
+            <th class="vertical-middle">Dnepropetrovsk</th>
+            <th class="vertical-middle">Kiev</th>
+            <th class="vertical-middle">Lviv</th>
+            <th ><div class="row">
+                <div class="col-sm-4">
+                    <div class="panel-body">
+                        <select class="js-example-data-array js-example-basic-single" id="inputCity" onchange="sendRequest()" >
+                        </select>
+                    </div>
+                </div>
+            </div></th>
+        </tr>
+       </thead>
+       <tbody>
+
+
+        <tr>
+            <td><IMG class="center-img center-block" id="D_clouds_img" SRC="images/solnce1.jpg"></td>
+            <td><IMG class="center-img center-block" id="K_clouds_img" SRC="images/solnce1.jpg"></td>
+            <td><IMG class="center-img center-block" id="L_clouds_img" SRC="images/solnce1.jpg"></td>
+            <td><IMG class="center-img center-block" id="clouds_img" SRC="images/solnce1.jpg"></td>
+        </tr>
+        <tr>
+            <td><div id="D_description" class="description"></div></td>
+            <td><div id="K_description" class="description"></div></td>
+            <td><div id="L_description" class="description"></div></td>
+            <td class><div id="description" class="description"></div></td>
+        </tr>
+       <tr>
+           <td><span class="glyphicon glyphicon-stats"></span><span id="D_temp" class="pull-right"></span></td>
+           <td><span class="glyphicon glyphicon-stats"></span><span id="K_temp" class="pull-right"></span></td>
+           <td><span class="glyphicon glyphicon-stats"></span><span id="L_temp" class="pull-right"></span></td>
+           <td><span class="glyphicon glyphicon-stats"></span><span id="temp" class="pull-right"></span></td>
+       </tr>
+        <tr>
+            <td><span class="glyphicon glyphicon-tint"></span><span id="D_humidity"class="pull-right"></span></td>
+            <td><span class="glyphicon glyphicon-tint"></span><span id="K_humidity"class="pull-right"></span></td>
+            <td><span class="glyphicon glyphicon-tint"></span><span id="L_humidity"class="pull-right"></span></td>
+            <td><span class="glyphicon glyphicon-tint"></span><span id="humidity"class="pull-right"></span></td>
+        </tr>
+        <tr>
+            <td><span class="glyphicon glyphicon-send"></span><span id="D_wind_speed" class="pull-right"></span>
+            <td><span class="glyphicon glyphicon-send"></span><span id="K_wind_speed" class="pull-right"></span>
+            <td><span class="glyphicon glyphicon-send"></span><span id="L_wind_speed" class="pull-right"></span>
+            <td><span class="glyphicon glyphicon-send"></span><span id="wind_speed" class="pull-right"></span></td>
+        </tr>
+       <tr>
+           <td><span class="glyphicon glyphicon-transfer"></span><span class="pull-right" id="D_wind_direction"></span></td>
+           <td><span class="glyphicon glyphicon-transfer"></span><span class="pull-right" id="K_wind_direction"></span></td>
+           <td><span class="glyphicon glyphicon-transfer"></span><span class="pull-right" id="L_wind_direction"></span></td>
+           <td><span class="glyphicon glyphicon-transfer"></span><span class="pull-right" id="wind_direction"></span></td>
+       </tr>
+        <tr>
+            <td><span class="glyphicon glyphicon-dashboard"></span><span class="pull-right" id="D_pressure"></span></td>
+            <td><span class="glyphicon glyphicon-dashboard"></span><span class="pull-right" id="K_pressure"></span></td>
+            <td><span class="glyphicon glyphicon-dashboard"></span><span class="pull-right" id="L_pressure"></span></td>
+            <td><span class="glyphicon glyphicon-dashboard"></span><span class="pull-right" id="pressure"></span></td>
+        </tr>
+
+       </tbody>
+    </table>
+
+</body>
+</html>

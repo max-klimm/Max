@@ -1,0 +1,25 @@
+.center-img{
+    height:75px;
+    width:75px;
+}
+.img_temp{
+    height:35px;
+    width:35px;
+}
+.table{
+    opacity: 0.8;
+    color: #669;
+    width: 40%;
+    margin: auto;
+}
+.description{
+    text-align:center;
+}
+th{
+    min-width: 170px;
+    text-align:center;
+
+}
+.table>thead>tr>th.vertical-middle{
+    vertical-align: middle;
+}
